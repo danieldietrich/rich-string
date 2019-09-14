@@ -24,21 +24,19 @@ The module supports ES6 _import_ and CommonJS _require_ style.
 import s from 'rich-string';
 
 /*
-function myMethod() {
-    console.log('Hi!');
-    return 0;
+function sayHi(name) {
+    console.log('Hi ${name}, I hope you are doing well!');
 }
 */
-const res = codeGen(s`
+const res = generateSayHi(s`
 
-    console.log('Hi!');
-    return 0;
-    
+    console.log('Hi \${name}, I hope you are doing well!');
+
 `);
 
-function codeGen(body: string): string {
+function generateSayHi(body: string): string {
     return s`
-        function myMethod() {
+        function sayHi(name) {
             ${body}
         }
     `;
