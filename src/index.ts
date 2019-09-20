@@ -1,6 +1,7 @@
 const leadingWhitespace = /^(s*\n)+/;
 const newline = /\n/g;
 const nonWhitespace = /\S|$/;
+
 /**
  * A tag function that automatically aligns embedded multiline strings.
  *
@@ -18,7 +19,7 @@ export = function s(staticParts: TemplateStringsArray, ...substitutions: unknown
         .map(line => line.slice(indent).trimRight()) // shifts lines to the left
         .join('\n')                                  // convert lines to string
         .trimRight()                                 // removes trailing whitespace after joining possibly empty lines
-        .replace(leadingWhitespace, '');                    // removes leading whitespace while preserving indentation
+        .replace(leadingWhitespace, '');             // removes leading whitespace while preserving indentation
 };
 
 // add the alignment of the previous static part to all lines of the following substitution

@@ -21,7 +21,7 @@ npm i @danieldietrich/rich-string
 The module supports ES6 _import_ and CommonJS _require_ style.
 
 ```ts
-import s from 'rich-string';
+import s from '@danieldietrich/rich-string';
 
 /*
 function sayHi(name) {
