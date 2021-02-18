@@ -63,7 +63,6 @@ module.exports = {
             default: "array-simple"
         }],
         "@typescript-eslint/ban-types": "error",                    // bans types like String in favor of string
-        "@typescript-eslint/class-name-casing": "error",            // classes and interfaces must be PascalCased
         "@typescript-eslint/indent": "error",                       // consistent indentation
         "@typescript-eslint/consistent-type-assertions": "error",   // needed for .tsx, bad = <Foo>bar, good = bar as Foo
         "@typescript-eslint/no-explicit-any": "error",              // don't use :any type
